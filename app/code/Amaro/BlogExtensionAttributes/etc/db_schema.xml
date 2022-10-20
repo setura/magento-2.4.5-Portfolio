@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+
+    <table name="amaro_blog_posts_extension_attributes" resource="default" engine="innodb"
+           comment="Amaro blog module extension_attribute table">
+        <column xsi:type="int" name="post_id" unsigned="true" nullable="false" identity="false" default="0"/>
+        <column xsi:type="varchar" length="255" name="seo_title" nullable="false" comment="SEO Title"/>
+        <column xsi:type="varchar" length="255" name="seo_description" nullable="false" comment="SEO Description"/>
+        <column xsi:type="varchar" length="255" name="seo_keywords" nullable="false" comment="SEO Keywords"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="post_id"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="FK_125C14DAC2AD43BBD34110F8CF131832" column="post_id"
+                    referenceTable="amaro_blog_post" referenceColumn="entity_id" onDelete="CASCADE"/>
+    </table>
+</schema>

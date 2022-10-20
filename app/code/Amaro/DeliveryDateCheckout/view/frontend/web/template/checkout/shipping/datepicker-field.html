@@ -1,0 +1,6 @@
+<div class="field" id="date-input-field" data-bind="blockLoader: isLoading">
+    <label data-bind="i18n: 'Select the delivery date:'"> </label>
+    <input type="text" class="input-text" id="date-input" name="delivery_date" afterRender="onElementRender"
+           style="width: auto" readonly="readonly" data-bind="textInput: delivery_date, value: deliveryDate">
+    <div class="date-input-field-alert" id="date-input-field-alert" data-bind="{fadeVisible: hasWarnings}"></div>
+</div>

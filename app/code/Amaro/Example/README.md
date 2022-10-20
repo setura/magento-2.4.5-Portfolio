@@ -1,0 +1,5 @@
+# Amaro Example
+
+---
+
+### Documentation

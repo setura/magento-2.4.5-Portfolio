@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_model_service_quote_submit_before">
+        <observer name="amaro_deliverydatecheckout_observer_frontend_sales_modelservicequotesubmitbefore_sales_model_service_quote_submit_before"
+                  instance="Amaro\DeliveryDateCheckout\Observer\Frontend\Sales\ModelServiceQuoteSubmitBefore"/>
+    </event>
+</config>

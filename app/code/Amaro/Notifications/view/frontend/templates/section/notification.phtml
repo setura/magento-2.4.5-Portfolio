@@ -1,0 +1,25 @@
+<?php
+/** @var $block Magento\Framework\View\Element\Template */
+?>
+<div class="customer-notification-section" data-bind="scope: 'notificationSection'"
+     style="width: 400px;margin: 30px 0 0 auto;">
+    <!-- ko foreach: { data: notifications().notifications, as: 'message' } -->
+    <p class="customer-notification-section-row" style="border-top: 1px solid white;">
+        <span class="message" data-bind="text: message"></span>
+    </p>
+    <!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "notificationSection": {
+                        "component": "Amaro_Notifications/js/notificationSection"
+                    }
+                }
+            }
+        }
+    }
+</script>

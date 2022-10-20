@@ -1,0 +1,5 @@
+# Amaro Notifications
+
+---
+
+### Documentation

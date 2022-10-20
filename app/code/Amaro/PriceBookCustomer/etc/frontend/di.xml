@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\App\Action\Action">
+        <plugin name="add_pricebook_context_on_get_requests_plugin"
+                type="Amaro\PriceBookCustomer\Plugin\Magento\Framework\App\Action\GetRequestUpdateContextPlugin" />
+    </type>
+    <preference for="Amaro\PriceBookCustomer\Api\HttpContextInterface"
+                type="\Amaro\PriceBookCustomer\Model\HttpContext"/>
+</config>

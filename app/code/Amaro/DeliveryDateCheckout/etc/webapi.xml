@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- Save delivery date on quote for guest -->
+    <route url="/V1/amaro-deliverydatecheckout/guest/delivery/:cartId" method="POST">
+        <service class="Amaro\DeliveryDateCheckout\Api\DeliveryDateManagementInterface" method="saveGuest"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <!-- Save delivery date on quote -->
+    <route url="/V1/amaro-deliverydatecheckout/mine/delivery/:cartId" method="POST">
+        <service class="Amaro\DeliveryDateCheckout\Api\DeliveryDateManagementInterface" method="save"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+</routes>

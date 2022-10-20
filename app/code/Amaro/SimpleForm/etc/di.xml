@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Amaro\SimpleForm\Api\ValidatorResultInterface" type="Amaro\SimpleForm\Model\ValidatorResult"/>
+    <preference for="Amaro\SimpleForm\Api\ValidatorInterface" type="Amaro\SimpleForm\Model\Form\ValidatorPool"/>
+    <type name="Amaro\SimpleForm\Model\Form\ValidatorPool">
+        <arguments>
+            <argument name="validators" xsi:type="array">
+                <item name="required_fields" xsi:type="object">Amaro\SimpleForm\Model\Form\Validation\RequiredFieldsValidator</item>
+                <item name="phone_validator" xsi:type="object">Amaro\SimpleForm\Model\Form\Validation\PhoneValidator</item>
+                <item name="email_validator" xsi:type="object">Amaro\SimpleForm\Model\Form\Validation\EmailValidator</item>
+                <item name="length_validator" xsi:type="object">Amaro\SimpleForm\Model\Form\Validation\LengthValidator</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Amaro\SimpleForm\Model\Form\Validation\EmailValidator">
+        <arguments>
+            <argument name="validationRules" xsi:type="array">
+                <item name="email" xsi:type="string">email</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Amaro\SimpleForm\Model\Form\Validation\PhoneValidator">
+        <arguments>
+            <argument name="validationRules" xsi:type="array">
+                <item name="phone" xsi:type="string">phone</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Amaro\SimpleForm\Model\Form\Validation\LengthValidator">
+        <arguments>
+            <argument name="validationRules" xsi:type="array">
+                <item name="comment" xsi:type="array">
+                    <item name="min" xsi:type="number">10</item>
+                    <item name="max" xsi:type="number">250</item>
+                </item>
+                <item name="phone" xsi:type="array">
+                    <item name="min" xsi:type="number">3</item>
+                    <item name="max" xsi:type="number">14</item>
+                </item>
+                <item name="email" xsi:type="array">
+                    <item name="min" xsi:type="number">2</item>
+                    <item name="max" xsi:type="number">320</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Amaro\SimpleForm\Model\Form\Validation\RequiredFieldsValidator">
+        <arguments>
+            <argument name="validationRules" xsi:type="array">
+                <item name="name" xsi:type="string">name</item>
+                <item name="email" xsi:type="string">email</item>
+                <item name="phone" xsi:type="string">phone</item>
+                <item name="comment" xsi:type="string">comment</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

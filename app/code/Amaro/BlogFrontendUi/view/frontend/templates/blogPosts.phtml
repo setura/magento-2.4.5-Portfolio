@@ -1,0 +1,33 @@
+<?php
+
+/** @var \Amaro\BlogFrontendUi\ViewModel\BlogPosts $viewModel*/
+$viewModel = $block->getData('blog_posts_view_model');
+$posts = $viewModel->getAllPosts();
+?>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Created At</th>
+        <th>Seo Title</th>
+        <th>Seo Content</th>
+        <th>Seo keywords</th>
+    </tr>
+    <?php foreach ($posts as $post): ?>
+    <tr>
+        <td><?= $block->escapeHtml($post->getData('title'))?></td>
+        <td><?= $block->escapeHtml($post->getData('content'))?></td>
+        <td><?= $block->escapeHtml($post->getData('created_at'))?></td>
+        <td><?= $block->escapeHtml($post->getExtensionAttributes()
+                ->getAmaroBlogPostExtensionAttributes()
+                ->getData('seo_title'))?></td>
+        <td><?= $block->escapeHtml($post->getExtensionAttributes()
+                ->getAmaroBlogPostExtensionAttributes()
+                ->getData('seo_description'))?></td>
+        <td><?= $block->escapeHtml($post->getExtensionAttributes()
+                ->getAmaroBlogPostExtensionAttributes()
+                ->getData('seo_keywords'))?></td>
+    </tr>
+    <?php endforeach;?>
+</table>
+

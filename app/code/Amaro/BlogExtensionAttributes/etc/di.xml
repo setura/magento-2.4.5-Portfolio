@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Amaro\BlogExtensionAttributes\Api\PostExtensionAttributesRepositoryInterface"
+                type="Amaro\BlogExtensionAttributes\Model\PostExtensionAttributesRepository"/>
+    <preference for="Amaro\BlogExtensionAttributes\Api\Data\PostExtensionAttributesInterface"
+                type="Amaro\BlogExtensionAttributes\Model\PostExtensionAttributes"/>
+</config>

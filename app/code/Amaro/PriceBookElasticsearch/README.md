@@ -1,0 +1,5 @@
+# Amaro PriceBookElasticsearch
+
+---
+
+### Documentation

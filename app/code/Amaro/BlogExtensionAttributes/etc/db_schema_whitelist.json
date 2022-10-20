@@ -1,0 +1,14 @@
+{
+    "amaro_blog_posts_extension_attributes": {
+        "column": {
+            "post_id": true,
+            "seo_title": true,
+            "seo_description": true,
+            "seo_keywords": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "FK_125C14DAC2AD43BBD34110F8CF131832": true
+        }
+    }
+}

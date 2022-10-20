@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Amaro_BlogAdminUi::view" title="Amaro Blog" module="Amaro_BlogAdminUi" sortOrder="50"
+             resource="Amaro_BlogAdminUi::view"/>
+
+        <add id="Amaro_BlogAdminUi::menu" title="Manage Grid" module="Amaro_BlogAdminUi" sortOrder="20"
+             parent="Amaro_BlogAdminUi::view" action="amaroblog/index/index" resource="Amaro_BlogAdminUi::menu"/>
+    </menu>
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Amaro\Blog\Api\PostRepositoryInterface" type="Amaro\Blog\Model\PostRepository"/>
+    <preference for="Amaro\Blog\Api\Data\PostInterface" type="Amaro\Blog\Model\Post"/>
+    <type name="Amaro\Blog\Api\PostRepositoryInterface">
+        <plugin name="amaro_blog_plugin" type="Amaro\Blog\Plugin\PostPlugin"/>
+    </type>
+</config>

@@ -1,0 +1,13 @@
+{
+    "amaro_product_pricebook": {
+        "column": {
+            "row_id": true,
+            "sku": true,
+            "price_book_code": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "AMARO_PRODUCT_PRICEBOOK_SKU_CATALOG_PRODUCT_ENTITY_SKU": true
+        }
+    }
+}

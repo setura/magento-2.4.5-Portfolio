@@ -1,0 +1,13 @@
+{
+    "amaro_notifications": {
+        "column": {
+            "notification_id": true,
+            "customer_id": true,
+            "message": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "AMARO_NOTIFICATIONS_CUSTOMER_ID_CUSTOMER_ENTITY_ENTITY_ID": true
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<?php
+
+/** @var \Magento\Customer\Block\Form\Edit $block */
+/**@var \Amaro\Customer\ViewModel\Customer $viewModel*/
+$viewModel = $block->getData('customer_view_model');
+?>
+<div class="field required mobile_number">
+    <label class="label" for="mobile_number"><span><?= $block->escapeHtml(__('Mobile Number')) ?></span></label>
+    <div class="control">
+        <input type="text" id="mobile_number" name="mobile_number"
+               value="<?= $block->escapeHtml($viewModel->getMobilePhone()) ?>"
+               title="<?= $block->escapeHtml(__('Mobile Number')) ?>"
+               class="input-text validate-phone-number" placeholder="+353850123456" autocomplete="off">
+    </div>
+</div>

@@ -1,0 +1,21 @@
+{
+    "name": "amaro/blog-frontend-ui",
+    "description": "Amaro_BlogFrontendUi is a module to show blog entity on frontend",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "require": {
+        "php": "~7.3.0||~7.4.0",
+        "amaro/blog": "1.0.*"
+    },
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Amaro\\BlogFrontendUi\\": ""
+        }
+    }
+}
+

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="amaro_product_pricebook" resource="default" engine="innodb" comment="Amaro_PriceBook module table">
+        <column xsi:type="int" name="row_id" unsigned="true" nullable="false" identity="true"/>
+        <column xsi:type="varchar" length="64" name="sku" nullable="false" comment="SKU"/>
+        <column xsi:type="varchar" length="255" name="price_book_code" nullable="false" comment="PriceBook code"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="row_id"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="AMARO_PRODUCT_PRICEBOOK_SKU_CATALOG_PRODUCT_ENTITY_SKU" column="sku"
+                    referenceTable="catalog_product_entity" referenceColumn="sku" onDelete="CASCADE"/>
+    </table>
+</schema>

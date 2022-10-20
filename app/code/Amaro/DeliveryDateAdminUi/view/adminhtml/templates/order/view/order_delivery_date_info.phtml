@@ -1,0 +1,14 @@
+<?php
+
+/** @var $escaper \Magento\Framework\Escaper */
+/** @var $block \Magento\Sales\Block\Adminhtml\Order\AbstractOrder */
+?>
+<div class="delivery__date__container">
+    <div class="delivery__date__container-title">
+        <strong class="title"><?= $escaper->escapeHtml(__('Delivery date'));?></strong>
+    </div>
+    <div class="delivery__date__container-content">
+        <?= $escaper->escapeHtml($block->getOrder()->getExtensionAttributes()->getDeliveryDate());?>
+    </div>
+    <br>
+</div>

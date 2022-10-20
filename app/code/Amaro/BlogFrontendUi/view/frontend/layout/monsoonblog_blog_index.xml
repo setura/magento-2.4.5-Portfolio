@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block name="amaro_blog_post_block" template="Amaro_BlogFrontendUi::blogPosts.phtml">
+                <arguments>
+                    <argument name="blog_posts_view_model"
+                              xsi:type="object">Amaro\BlogFrontendUi\ViewModel\BlogPosts</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

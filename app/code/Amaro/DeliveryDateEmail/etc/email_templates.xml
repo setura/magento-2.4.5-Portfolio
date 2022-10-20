@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="amaro_delivery_sales_email_order_template" label="AmaroDeliveryDate New Order" file="amaro_delivery_order_new.html"
+              type="html" module="Amaro_DeliveryDateEmail" area="frontend"/>
+</config>

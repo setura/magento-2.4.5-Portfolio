@@ -1,0 +1,42 @@
+& when (@media-common = true) {
+    @color-orange: #ffa500;
+    @color-orange-darker: #c98300;
+    @color-white-smoke: #f5f5f5;
+
+    .ui-datepicker .ui-datepicker-calendar tbody td:not(.ui-datepicker-unselectable).delivery-saturday-highlight {
+        background-color: @color-orange;
+
+        &[title] {
+            position: relative;
+        }
+
+        &[title]::after {
+            background: @color-white-smoke;
+            border: solid 1px;
+            bottom: 0%;
+            content: attr(title);
+            left: 120%;
+            opacity: 0;
+            padding: 2px;
+            position: absolute;
+            width: max-content;
+        }
+
+        &[title]:hover::after {
+            opacity: 1;
+        }
+
+        > a:hover {
+            background-color: @color-orange-darker;
+        }
+    }
+
+    .date-input-field-alert {
+        background: @color-orange;
+        border-radius: 5px;
+        margin-top: 5px;
+        max-width: fit-content;
+        padding: 0 5px;
+        text-align: center;
+    }
+}

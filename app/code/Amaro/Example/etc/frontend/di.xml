@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\App\Action\Action">
+        <plugin name="add_context_on_get_requests_plugin"
+                type="Amaro\Example\Plugin\Magento\Framework\App\Action\GetRequestUpdateContextPlugin" />
+    </type>
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="hide_add_to_cart_based_on_hide_prices_context_plugin"
+                type="Amaro\Example\Plugin\Magento\Catalog\Model\Product\HideAddToCartContextPlugin" />
+    </type>
+    <type name="Magento\Catalog\Pricing\Render\FinalPriceBox">
+        <plugin name="hide_price_based_on_hide_prices_context_plugin"
+                type="Amaro\Example\Plugin\Magento\Catalog\Pricing\Render\FinalPriceBoxPlugin" />
+    </type>
+</config>

@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!--Regular user APIs-->
+    <route url="/V1/notifications/me" method="GET">
+        <service class="Amaro\Notifications\Api\NotificationRepositoryInterface" method="getListByCustomerId"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <route url="/V1/notifications/me/:notificationId" method="GET">
+        <service class="Amaro\Notifications\Api\NotificationRepositoryInterface" method="getForCustomer"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <route url="/V1/notifications/me/:notificationId" method="PUT">
+        <service class="Amaro\Notifications\Api\NotificationRepositoryInterface" method="saveForCustomer"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <!--Admin user APIs-->
+    <route url="/V1/notifications" method="GET">
+        <service class="Amaro\Notifications\Api\NotificationRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="Magento_Backend::admin"/>
+        </resources>
+    </route>
+    <route url="/V1/notifications/:notificationId" method="GET">
+        <service class="Amaro\Notifications\Api\NotificationRepositoryInterface" method="get"/>
+        <resources>
+            <resource ref="Magento_Backend::admin"/>
+        </resources>
+    </route>
+    <route url="/V1/notifications" method="POST">
+        <service class="Amaro\Notifications\Api\NotificationRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Magento_Backend::admin"/>
+        </resources>
+    </route>
+    <route url="/V1/notifications/:notificationId" method="PUT">
+        <service class="Amaro\Notifications\Api\NotificationRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Magento_Backend::admin"/>
+        </resources>
+    </route>
+    <route url="/V1/notifications/:notificationId" method="DELETE">
+        <service class="Amaro\Notifications\Api\NotificationRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Magento_Backend::admin"/>
+        </resources>
+    </route>
+</routes>

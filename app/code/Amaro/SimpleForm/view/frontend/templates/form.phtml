@@ -1,0 +1,11 @@
+<form action="<?=$block->escapeUrl($block->getUrl('simpleform/save/form'))?>" method="post">
+    <label for="name"><?= $block->escapeHtml(__('Name'))?></label>
+    <input name="name" type="text">
+    <label for="email"><?= $block->escapeHtml(__('Email'))?></label>
+    <input name="email" type="text">
+    <label for="phone"><?= $block->escapeHtml(__('Phone'))?></label>
+    <input name="phone" placeholder="+xyz..." type="text">
+    <label for="comment"><?= $block->escapeHtml(__('Comment'))?></label>
+    <input name="comment" type="text">
+    <input type="submit" value="<?= $block->escapeHtml(__('Submit'))?>">
+</form>

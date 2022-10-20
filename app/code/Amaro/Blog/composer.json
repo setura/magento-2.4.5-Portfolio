@@ -1,0 +1,19 @@
+{
+    "name": "amaro/blog",
+    "description": "This module adds the blog feature to the store.",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "require": {
+        "php": "~7.3.0||~7.4.0"
+    },
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Amaro\\Blog\\": ""
+        }
+    }
+}
